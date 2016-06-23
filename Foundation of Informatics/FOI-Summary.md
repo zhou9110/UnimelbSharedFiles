@@ -688,8 +688,10 @@ Why Visualization
 
 - pre-attentive processing is done quickly, effortlessly and in parallel without any attention being focused on the display
 
-Functions of Visualization
+Bertin's Semiology
 -----
+
+### Functions of Visualization
 
 - Associative function
     *grouping* of all correspondences **differentiated by a variable**
@@ -705,6 +707,10 @@ Functions of Visualization
     perceived as *proportional*
 
 ![variable vs function](https://raw.githubusercontent.com/yxliang01/UnimelbSharedFiles/master/Foundation%20of%20Informatics/Summary%20Resource/visualization-variable-vs-function.PNG)
+
+
+Mackinlay's semiology
+-----
 
 ![accuracy of visual variables](https://raw.githubusercontent.com/yxliang01/UnimelbSharedFiles/master/Foundation%20of%20Informatics/Summary%20Resource/visualization-accuracy-of-visual-variables.PNG)
 
@@ -757,7 +763,8 @@ Guidelines
 
 - Don't change the scale across charts which are intended to be contrasted (rubber scaling)
 - Don't leave out the origin for *ratio variables* unless necessary
-- Don't use *line chart* for *comparing nominal variables* (is that possible??)
+- Don't use *line chart* for *comparing nominal variables*
+    + Because line chart implies continuity (mostly over time), so we typically use it for continuous values of an entity (e.g. population of Sydney). But we don't use it for comparing two nominal entities (Sydney population vs Melbourne population).
 - Don't *change* the *ordering of ordinal variables*
 - careful about red-green color blindness
 - visually impaired people need HIGH contrast
@@ -772,7 +779,7 @@ Measuring Visualization Effectiveness
 - data density index(ddi)
     + the number of numbers plotted per square inch
 - data ink ratio (???)
-    + the ink used for **showing data** divided by the total ink used for the **whole graphic**
+    + $\text{ data ink ratio } = \frac{\text{ink used to decribe the data}}{\text{ink used to decribe everything else}}$ 
     + the proportion of ink used for non-erasable display of information
     + 1.0 - redundant ink
 
@@ -782,13 +789,13 @@ Visualization steps
 -----
 
 - Data Definition
-    + define the visualization goal and the supporting data variables
+    + define the visualization **goal** and the **supporting data variables**
 - Visualization selection
-    + select appropriate visual structure
+    + select **appropriate visual structure**
 - Data pre-processing
-    + preparing raw to visualization-ready data
+    + preparing raw to **visualization-ready data**
 - Visual transformation
-    + mapping data variables to visual elements
+    + **mapping data variables to visual elements**
 
 
 Matplotlib
@@ -811,13 +818,13 @@ W3schools says that for good web development you need to know "at least"
 MISC Synchronous & Asynchronous
 -----
 
-Synchronous = occurring in a specified sequence or at a sepcified time interval
-Asynchronous = time intervals/sequences are not specified
+Synchronous = occurring in a specified sequence or at a specified time interval
+Asynchronous = time intervals/sequences are *not specified*
 
 
 ### AJAX (Asynchronous Javascript and XML)
 
-Group of technologies used to communicate between client and server without *interfering with display or behavior of a page*
+**Group of technologies** used to communicate between client and server without *interfering with display or behavior of a page*
 
 - HTML/CSS for presentation
 - DOM for dynamic display
@@ -883,7 +890,7 @@ JavaScript
     + you don't have to declare the variable types
     + it will be firgued out at run-time
 - Basic types
-    + basic types - `number`, `string`, `boolean`, `null` and `undefined`
+    + basic types - `number`, `string`, `boolean` and `undefined`
     + everything else is an Object
 ```js
 var obj = {
@@ -927,17 +934,17 @@ Advantage
 
 - `selector` may match more than one elements
     + manipulating with `$(selector)` will let you do things with the first element
-    + `$(selector)[i]` will give you the *DOM object* of the $i_th$ element
-    + `$(selector).eq(i)` will give you the *jQuery object* of the $i_th$ element     
+    + `$(selector)[i]` will give you the *DOM object* of the $i_{th}$ element
+    + `$(selector).eq(i)` will give you the *jQuery object* of the $i_{th}$ element     
 
 ### Reason of using JavaScript to do interactivity
 
 - Client-side processing
-    + faster for non computational expensive calculations
+    + **faster** for non computational expensive calculations
 - Document Object Model (DOM)
-    + part of the content of the web-page can be changed without having to build the whole thing from scratch
+    + **part of the content of the web-page can be changed without having to build the whole thing from scratch**
 - Event-driven programming
-    + changes are being triggered by many events built into that page, rather than only the HTTP requests
+    + **changes are being triggered by many events built into that page, rather than only the HTTP requests**
 
 
 
@@ -947,7 +954,7 @@ Database
 =====
 
 NoSQL is an alternative to the traditional SQL databases.
-With SQL, you have a structure that has been optimized for navigation
+With SQL, you have a structure that has been optimized for **navigation**
 
 - structure and organization is high
 - speed of query is low
@@ -955,7 +962,7 @@ With SQL, you have a structure that has been optimized for navigation
 With NoSQL, the optimization is for storage
 
 - Speed is high (as long as data is ordered and regular)
-    + \*however, when the ordering matters or access is random, the speed slows significantly\*
+    + \*however, when the ordering matters or *access is random*, the speed slows significantly\*
 - Structure is low
 - *Good for highly regular and predictable data patterns*
 
@@ -999,9 +1006,9 @@ Big infrastructure
 -----
 
 - cluster computing (90's and earlier)
-    + set of computers that work together and can be viewed at a single system
+    + set of computers that work together and can be **viewed at a single system**
 - grid computing (00's)
-    + collection of computer resources to achieve common goal
+    + collection of computer resources to **achieve common goal**
     + modeled on the electricity grid
     + process grids/information grids
     + SETI@home was one of the original concepts
@@ -1014,14 +1021,16 @@ Big infrastructure
 Big Data Details
 -----
 
+4Vs
+
 - Volume
-    + How big is the data?
+    + How *big* is the data?
 - Velocity
-    + How fast is the data generated?
+    + How *fast* is the *data generated*?
 - Variability
-    + how regular or varies is the data?
+    + how *regular or varies* is the data?
 - Veracity
-    + What is the quality/consistency of the data?
+    + What is the *quality/consistency of the data*?
 
 
 Three problems (What Big Data is trying to deal with)
@@ -1036,14 +1045,14 @@ Three problems (What Big Data is trying to deal with)
     + Structure
         * Structured database organized into tables
             - Query using SQL(Standard Query Language)
-            - organization allows optimization of speed to "finding useful stuff"
+            - organization allows optimization of *speed to "finding useful stuff"*
     + Size
         * No SQL
             - one big repository that follows a simple syntax and grows by simple addition
     + Can you store all that data in an organized and easily accessible way?
 
 
-These are the unsolved problems that Big Data tries to fix so that large volumes of data can be collected, stored and accessed easily.
+These are the unsolved problems that Big Data tries to fix so that large volumes of data can be *collected*, *stored* and *accessed* ***easily***.
 
 They *DO NOT* impact the science that you are trying to do.
 
@@ -1053,11 +1062,11 @@ Security
 
 Security philosophy - Three Categories of actions (sorted from least effective to most effective)
 
-- Prevention (gates, locks, etc..)
+- **Prevention** (gates, locks, etc..)
     + Username/passwords
-- Detection (alarms)
+- **Detection** (alarms)
     + Audit trails
-- Reaction (prosecution, payback, etc...)
+- **Reaction** (prosecution, payback, etc...)
     + Auditing and attribution
 
 
@@ -1080,9 +1089,9 @@ i18n & L10n
 Misc Definitions
 -----
 
-A locale is a collection of parameters that defined specific language, country, script, rules, and code character set
+A locale is a collection of parameters that **defined** ***specific*** *language, country, script, rules, and code character set*
 
-A character is a indivisible unit of text. A character set defines the range of a character collection.
+A character is a indivisible unit of text. A character set *defines the range of a character collection*.
 
 
 
@@ -1091,7 +1100,7 @@ A character is a indivisible unit of text. A character set defines the range of 
 Localization
 -----
 
-modifying or adapting an application to fit the requirements of a particular locale
+modifying or adapting an application to **fit the requirements of a particular locale**
 
 
 Internationalization
@@ -1287,7 +1296,7 @@ Definitions
 
 - variable type
     + continuous (*numerical*, *quantitative*)
-        * numbers or anything that can have a range
+        * numbers or anything that can *have a range*
         * examples
             - Temperature
             - Velocity
@@ -1312,17 +1321,18 @@ Definitions
     + nominal scale
     + ordinal scale
     + interval scale
-        * has no meaningful zero point (no origin)
+        * has **no meaningful zero point** (no origin)
         * express difference (interval) between two measurements
         * examples
             - dates, latitude
             - Celsius temperature
             - To say that "2 degree Celsius is twice as hot as 1 degree" is *NOT* meaningful
     + ratio scale
-        * has a meaningful, unique and non-arbitrary zero point
+        * has a **meaningful**, **unique** and **non-arbitrary zero point**
         * examples
             - mass, length, duration, angle
             - it's meaningful to say "2-meter object is twice as long as a 1-meter object"
+
 
 Steps of doing data analysis
 -----
@@ -1336,9 +1346,9 @@ Steps of doing data analysis
     + are there *errors* and is the data *valid*?
     + what was the original data collection purpose?
 4. **Transformation**
-    + Turn the data into something *presentable*
+    + Turn the data into something **presentable**
 5. **Feature selection**
-    + Pull out the relevant bits to *address* your *hypothesis*
+    + Pull out the *relevant bits to *address* your *hypothesis**
 
 
 Sourcing
@@ -1384,7 +1394,7 @@ Understanding
                     * split up the range equally
                 + Quantile
                     * the most commonly used method to define class boundaries
-                    * look at the data and break up the categories so that each one has equal member numbers
+                    * look at the data and break up the categories so that *each one has equal member numbers*
                     * First quantile $Q1$ - Lower Quantile (25<sup>th</sup> percentile)
                     * Second quantile $Q2$ - Median (50<sup>th</sup> percentile)
                     * Third quantile $Q3$ - Upper Quantile (75<sup>th</sup> percentile)
@@ -1400,7 +1410,7 @@ cleaning
 
 validation and tidying of the data
 
-**two problems**
+**three problems**
 
 - semantic similarities
     + example
@@ -1408,7 +1418,7 @@ validation and tidying of the data
         * "General Elec Co."
         * "GE"
         * "Gen. Electric Company"
-- Range problems (or wrong units)
+- Range problems (or *wrong units*)
     + example
         * Age - 150 years
         * Blood pressure - 250 mmHg
@@ -1491,9 +1501,9 @@ Contingency Table
 
 - A matrix that shows the *frequency distribution* of the two variables being correlated
 - cross tabulation
-- shows the number of observations for each combination of discrete values from two categorical variables
+- shows the number of observations for each combination of discrete values from **two categorical variables**
 - categorical values can be *ordinal* or *nominal*
-- continuous values must be made discrete (categorized)
+- **continuous values must be made discrete (categorized)**
 
 rank correlation
 -----
@@ -1505,25 +1515,27 @@ basically, calculate similarities between ranks
 $$p = 1 - \frac{6\sum{d^2}}{n(n^{2}-1)}$$
 $$\text{ where }d_i = x_i - y_i$$
 
-relatively high value (nearer + 1) suggests yes, there is a relationship
+**relatively high value (nearer + 1) suggests yes**, there is a relationship
 
 ### regression (regression line)
 
 the concept that in the long-term, extreme measurements of a continuous variable will converge on a single "average" relationship
 
-the idea is that there is a defined meaning of "normal" of this data-set, and in a good model the data points are never very far from "normal"
+the idea is that there is a **defined meaning of "normal"** of this data-set, and in a **good model the data points are never very far from "normal"**
 
 #### Linear regression
 
 The slope of the linear regression line is the *correlation co-efficient*
 
+
 $$ \text{(inverse correlation)} -1 <= r <= 1 \text{(positive correlation)} $$
-If $r$ = 0, means (no correlation)
+
+$|r|$ indicates how strong the relationship is. 0 is no correlation.
 
 
 ### Pearson correlation coefficient
 
-the degree of relationship between two continuous variables
+the **degree of relationship between two continuous variables**
 
 
 Data Mining
@@ -1533,14 +1545,14 @@ Unsupervised VS Supervised
 -----
 
 Unsupervised learning: provide broader view to get the "data landscape" or "interesting recurrent pattern"
-Supervised learning: some prior knowledge about what you want to find out (target variable)
+Supervised learning: some **prior knowledge about what you want to find out** (target variable)
 
 
 Unsupervised learning (???)
 -----
 
 - Association rule
-    + generate rules based on observations of the data-set
+    + **generate rules based on observations of the data-set**
     + good when
         * rule is easy to apply to other data points
         * rule can be generated by analyzing the data-set
@@ -1549,7 +1561,7 @@ Unsupervised learning (???)
         * actionable (something that can do)
         * good for large data
     + disadvantage
-        * categorical only
+        * **categorical only**
         * time-consuming to generate
         * many rules means priority to be worked out
 - Clustering
@@ -1557,7 +1569,7 @@ Unsupervised learning (???)
     + K-means clustering
     + advantage
         * flexible
-        * hierarchical approach possible
+        * **hierarchical approach possible**
     + disadvantage
         * setting initial cluster number
         * can be slow
@@ -1586,11 +1598,12 @@ Supervised
     + the confusion matrix
     
     | Actual/Predicted | Positive | Negative |
-    | True             | TP       | FN       |
-    | False            | FP       | TN       |
+    |------------------|----------|----------|
+    | True (actual)    | TP       | FN       |
+    | False (actual)   | FP       | TN       |
 
-    T/F indicates whether the predicted result is correct
-    P/N indicates whether the predicted result is positive or negative
+    T/F indicates whether the ***predicted result is correct***
+    P/N indicates whether the ***predicted result is positive or negative***
 
     + sensitivity = how well the model is able to predict **true** values
         * $Sensitivity = \frac{TP}{TP + FN}$
@@ -1618,7 +1631,7 @@ Graph
 - Acyclic
     + no loop/cycle
 - Degree of a node
-    + the number of edges of a node (indegree/outdegree)
+    + the number of edges of a node (it is called *in-degree* and *out-degree* in directed graph)
 - Path
     + A sequence of nodes that can be traversed by traveling through edges from a starting node to an ending node
 - Geodesic Path
@@ -1627,11 +1640,11 @@ Graph
 
 ### Properties
 
-- order of a graph
-    + the number of vertices
-- size of a graph
-    + the number of edges
-- degree of node $deg(v)$ 
+- **order** of a graph
+    + the number of **vertices**
+- **size** of a graph
+    + the number of **edges**
+- degree of node $deg(v)$ in undirected graph
     + the number of edges incident to it
 - geodesic distance between $v$ and $w$ -> $\delta(v, w)$
     + *number of edges in the geodesic path* between $v$ and $w$
@@ -1645,12 +1658,12 @@ Four categories
 
 - A = Degree centrality
     + how many neighbors
-    + $C_d = $the degree of a node (the number of edges attached to it) (???what if directed???)
+    + $C_d = $the degree of a node (the number of edges attached to it) (if directed, there's in-degree centrality and out-degree centrality)
     + $C_d(v) = deg(v)$
 - B = Closeness centrality
     + how close to other nodes
     + how close you are in general with other people in the network
-    + $C_s = $the reciprocal of the average length of geodesic paths between a node and all other nodes
+    + $C_s = $the reciprocal of the **average length of geodesic paths between a node and all other nodes**
     + $C_s(v) = \frac{1}{\sum \delta(v,w)} , w \in V$
 - C = Betweenness centrality
     + bridging nodes
@@ -1660,7 +1673,7 @@ Four categories
     + has example in slide
 - D = Eigenvector centrality
     + connect to well-connected nodes
-    + no only concern about the degree of the node but also the degree of the connected nodes
+    + not only **concern** about the degree of the node but also **the degree of the connected nodes**
     + Application: Google PageRank and SocialRank 
 
 
@@ -1696,25 +1709,26 @@ Oxford's definition
 - As a mathematically defined quantity divorced from any concept of news or meaning... One which represents the degree of choice exercised in the selection or formation of one particular symbol, message, etc... out of a number of possible ones, and which is defined logarithmically in terms of the statistical probabilities of occurrence of the symbol or the elements of the message
     + information as a fact
     + out-of-context
-    + according to them, the following has the same information
+    + only care about quantity
+    + according to them, the following has the same information because the number of characters is the same
         * "4566 7450 2344 1935 AMEX 08/17"
         * "I am floating like a butterfly"
 - contrasted with data: that which is obtained by the processing of data
-    + information as a subjective entity
-    + data is raw facts, information is processed data, within organizations, in a social context
+    + information as a **subjective entity**
+    + data is raw facts, information is *processed data*, within organizations, in a social context
     + A pragmatic definition defines the topic as the most valuable form of content in a continuum starting at *data*, encompassing *information*, and ending at *knowledge*
     + we will stick to this one
 
 ![Information Triangle](https://raw.githubusercontent.com/yxliang01/UnimelbSharedFiles/master/Foundation%20of%20Informatics/Summary%20Resource/Information%20Triangle.PNG)
 
 - Data
-    + know nothing (symbols)
+    + know **nothing** (symbols)
 - Information
-    + know what, who, when, where (processed data)
+    + know **what, who, when, where** (processed data)
 - Knowledge
-    + Know how (actionable information)
+    + Know **how** (actionable information)
 - Wisdom
-    + know why (evaluated understanding)
+    + know **why** (evaluated understanding)
 
 Data as signals *ignores the meaning of its content*
 Information in context considers observers (subject) and *what the information means to them*
@@ -1726,8 +1740,10 @@ Information as signs
 
 - *syntactics* (rules)
     + formal structures of signs, grammar/rules, of *signs construction and relation*
+    + tells you how to form a sign
 - *semantics* (meaning)
     + *relation between signs and objects* (the things to which they refer) *in the mind of the observers*
+    + what's it all about
 - *pragmatics* (what you can do with that)
     + *relation between signs and their context* (of *the observers that interact with the things*)
 
@@ -1751,7 +1767,7 @@ Peirce's typology of signs
         * smoke and fire 
 - Symbols
     + Imputed character
-    + arbitrary representations of objects
+    + **arbitrary representations of objects**
     + a social convention should be established to understand the representation
     + things actually don't imply other things but, we **force them to imply** something  
     + my examples
@@ -1761,7 +1777,7 @@ From [Indiana University](http://www.cs.indiana.edu/~port/teach/103/sign.symbol.
 
 - **Icons** have a physical resemblance between the signal and the meaning
 - **Indices** have a correlation in space and time with its meaning.
-- **Symbols** (content words like nouns, verbs and adjectives) are (sound)patterns) that get meaning:
+- **Symbols** (content words like nouns, verbs and adjectives) are (sound)patterns that get meaning:
     + primarily from its mental association with other symbols and
     + secondarily from its correlation with environmental patterns.
 
@@ -1810,11 +1826,11 @@ Entropy of selecting a symbol from $X$ is:
 
 $$H(X) = -\sum_{i=1}^{n} p(x_i) \log p(x_i)$$
 
-$H$ is maximum when *all* $p(x_i)$ are equal
-$H$ is minimum when *any of* $p(x_i)$ is 1 (since the information is fixed(certain to be the thing))
+$H$ is **maximum** when *all* $p(x_i)$ are equal
+$H$ is **minimum** when *any of* $p(x_i)$ is 1 (since the information is fixed(certain to be the thing))
 
-$H$ indicates the *theoretical bounds for the average bits needed to
-represent/compress the symbols*
+$H$ indicates the **theoretical bounds for the average bits needed to
+represent/compress the symbols**
 
 
 Not Examinable
@@ -1844,6 +1860,11 @@ Why do we want client-side processing
 
 If we always need to send data to server in order to process, it will be too slow. As a result, we want to do some lightweight processing on client side. In the early 2000's, people send pre-compiled code to client browser to process. But, this approach lacked flexibility because we have to load the whole compiled application. Ajax is one of the solution for this. With Ajax,
 we can load the part that we need in real-time without having to load everything no matter whether we need it or not. So that, client browsers don't have to download large amount of data. 
+
+CSS specificity
+-----
+
+A very good article [click ME!](https://css-tricks.com/specifics-on-css-specificity/)
 
 
 
@@ -1878,24 +1899,274 @@ The harvesting of personal information for Big Data projects has ramifications f
 If someone had posted a photo of his electronic medical record id having details related to the illness he has at the moment accidentally, salesmen selling medicines may try to get his electronic medical record by the id and try to know what illness he has now, then try to promote medicines to him which may disturbing his life badly. The curators of the social information and the medical records can set an appropriate privacy setting on the data (e.g. for social information, only viewable by his friends; for medical record, only viewable by himself and doctors curing him).
 
 
-Last Lecture Practice Exam Questions
+Extra Practice Exam Questions (released two days before exam)
 =====
+
+Spreadsheet Questions (CORRECT)
+-----
+
+### Q8 a) (CORRECT)
+
+Return the names of the 2010/11 English Premier Leagues which didn't lost any game at all. One row per name.
+
+### Q8 b) (CORRECT)
+
+The average of "For"(goals scored by the team) of all teams which had won more than lost and had drawn for less than twice. 
+
+### Q8 c) (CORRECT)
+
+`=3*C2 + 1* D2`
+
+### Q8 d) (CORRECT)
+
+`=sort($A2:$I21, $I2:$I21, FALSE, $H2:$H21, FALSE, $F2:$F21, FALSE)`
+
+
+Flask Interactive Web Application Question (CORRECT)
+-----
+
+```python
+from flask import Flask, request
+import json
+app = Flask(__name__, static_folder='.', static_url_path='')
+
+template = '''<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="style-generator">
+  </head>
+  <body>
+    <form method="post" action="table-generator">
+      Row: <input type="text" name="row">    
+      Column: <input type="text" name="column">
+      <input type="submit"/>
+    </form>
+    <hr>
+    <div id="container">%s</div>
+  </body>
+</html>'''
+
+@app.route("/style-generator", methods=['GET'])
+def css_gen():
+    css_in_json = json.load(open('style.json'))
+    style = ''
+    # construct style here
+
+    for selector, properties in css_in_json.items():
+        style += (selector + "{")
+        for p, v in properties.items():
+            style += p + ':' + v + ';'
+        style += '}\n'
+
+    return style, 200, {'Content-Type': 'text/css'}
+
+
+@app.route("/table-generator", methods=['POST', 'GET'])
+def table_gen():
+    table = ''
+    # get user input here
+    row = int(request.form['row'] if 'row' in request.form else 0)
+    column = int(request.form['column'] if 'column' in request.form else 0)
+    # construct the table here
+    table = '<table>'
+    for r in range(row):
+        table += '<tr>'
+
+        for c in range(column):
+            table += '<td>&nbsp;</td>'
+
+        table += '</tr>'
+
+    table += '</table>'
+
+    body = template % (table)
+    return body, 200, {'Content-Type': 'text/html'}
+
+if __name__ == "__main__":
+    app.run(debug=True, host='127.0.0.1', port=9999)
+```
+
+
+Network
+-----
+
+### 5. a)
+
+closeness centrality is measuring how close the vertex to all other vertices is while eigenvector centrality concerns how high the degrees are for all vertices connected to the vertex. Eigenvector centrality gives you an idea of how important the vertex is by checking how important the vertices connected to the vertex are.
+
+### 5. b)
+
+Vertex E has the highest betweenness centrality since it's bridging vertices A,B,C and D to vertices E,F,G,H and I. In order to go from vertices A,B,C and D to vertices E,F,G,H and I, you must pass through E.
+
+### 5. c)
+
+D and H have lowest centrality since they are not bridging any vertex. They are not part of any geodesic path for which the destination and the source vertex are not D nor H.
+
+### 5. d)
+
+B, C, D and E has lowest centrality since they are not bridging any vertex. They are part of any geodesic path for which the destination and the source vertex are not B,C,D nor E.
+
+### 5. e)
+
+A has the highest closeness centrality since the geodesic distance of it to any other vertex is 1 while the maximum geodesic distance of all other vertices v (v not equal to A) to all other vertices u for which v is not equal to u is 2.   
+
+
+
 
 A
 -----
 
 A and G have the highest betweenness centrality. Since for A, All geodesic paths from {B,C,D,E} to nodes other than {A} are having A in them and for G, All geodesic paths from {H, I, J, K} to nodes other than {G} are having G in them. Betweenness centrality of A and G is $1/1 * 9 * 4 = 36$ with A and G in between. You may think that F has the highest betweenness centrality since it connects up the nodes connected to A and G together. However, F has the betweenness centrality of $1/1 * 5 * 5 = 25$ which is less than $36$.
 
-GET and POST are two methods of passing information through the HTTP protocol. Describe both of these methods, emphasising similarities and differences, and their implications for privacy
+Sample set 1
 -----
 
+### GET and POST are two methods of passing information through the HTTP protocol. Describe both of these methods, emphasizing similarities and differences, and their implications for privacy
 
-Describe two differences between the ASCII character system and the Unicode character system, including the difference in how they can be represented in Python
+Similarity: Both GET and POST can pass user input to the server. 
+Difference:
+|                POST               |             GET             |
+|-----------------------------------|-----------------------------|
+| stores the data in HTTP body/data | stores the data in the URL  |
+|                                   |                             |
+| the data can be very large        | the length is limited since |
+|                                   | it's in the URL             |
+
+If you want to transfer a sensitive message, you should use POST since it will not be shown in the URL although attackers can still capture your data.  
+
+
+### Describe two differences between the ASCII character system and the Unicode character system, including the difference in how they can be represented in Python
+
+|             ASCII             |                  Unicode                   |
+|-------------------------------|--------------------------------------------|
+| can only store 128 characters | can store most of the documented languages |
+|                               | in the world                               |
+|                               |                                            |
+| the physical representation   | the physical representation is             |
+| is same as the code points    | different from the code points             |
+|                               |                                            |
+| In python, they are byte      | In python, they are Unicode strings        |
+| strings                       |                                            |
+
+
+### In the field of social network analysis, closeness centrality and eigenvector centrality are two of the numerous measures of centrality of a vertex in a graph (or a network). Briefly (5-10 lines) describe these two notions of centrality
+
+Redundant with the network question set.
+
+
+Sample Set 2
 -----
 
+### 1.
 
-In the field of social network analysis, closeness centrality and eigenvector centrality are two of the numerous measures of centrality of a vertex in a graph (or a network). Briefly (5-10 lines) describe these two notions of centrality
------
+#### a)
+
+Line 13, `<title>Using XML for Science</title>`
+Line 19, `</book>`
+Line 4, `<book genre="fiction">`
+Line 5, `<title>The Clouds and Beyond</title>`
+Line 15 and 16, simply make line 16 becomes line 15 and the original line 15 becomes line 16
+Line 14, `<author>`
+
+#### b) (correct)
+
+|      XML       |     JSON    |
+|----------------|-------------|
+| large overhead | lightweight |
+| verbose        | streamlined |
+
+#### c) (correct)
+
+```json
+{
+    "catalog":[
+        {
+            "genre":"fiction",
+            "title":"The Clouds and Beyond",
+            "author":{
+                "firstname":"Rebecca",
+                "surname":"Skye"
+            },
+            "isbn":"1-23456-789-0"
+        },
+        {
+            "genre":"non-fiction",
+            "title":"Using XML for Science",
+            "author":{
+                "firstname":"James",
+                "surname":"Bean"
+            },
+            "isbn":"0-98765-432-1"
+        }
+    ]
+}
+```
+
+
+### 7.
+
+#### a)
+
+1. Asynchronous
+
+data can be processed in background without interfering users' viewing -> good user experience
+
+2. Portable
+
+it can be executed on lots of platforms and browsers -> can be widely used
+
+3. Event-Driven
+
+Javascript can respond to events whenever events are created -> responsiveness
+
+#### b)
+
+the content will be "Text B". Only when we click on the button "Change text" on the HTML page, the function `fn()` will be called
+
+### 8.
+
+#### a)
+
+They can remove the names from those medical information and use ID to identify who the subjects were. The mapping from ID to subjects' personal details can be stored in physical files in order to avoid leakage of the relationship between medical information and the physical subjects.
+
+
+#### b)
+
+If you are to pose a post which is viewable to the public saying that you are having a fever, medication selling companies may see it on Facebook and get your phone number on your profile page. Then, they can just keep promoting medication which can cure fever in order to get profit.
+
+
+#### c)
+
+1. data consistency
+
+how to deal data from different sources
+
+2. size vs structure
+
+based on the usage, decide whether to use NOSql or relational database
+
+3. Network
+
+Comparing the speed of processing on individual node with the time taken to get data from other nodes 
+
+
+### 9.
+
+#### a)
+
+80% of all nodes have low closeness centrality means distribution points are normally far from each other. To distribute the products from a distribution point to the others may spend quite a lot of money on transportation.
+
+
+#### b)
+
+B and F have the highest closeness centrality since to all other vertices, the geodesic distance is at most 2.
+
+#### c)
+
+E has the highest closeness centrality since if A,B or C wants to travel to F,I or G, you must go through the E. As a result, it indicates that you if go directly from E, the geodesic distance is shorter. Same thing goes to situation where going from F,I or G to A,B or C.
+
+#### d)
+
 
 
 
@@ -1903,22 +2174,22 @@ In the field of social network analysis, closeness centrality and eigenvector ce
 Checklist
 =====
 
-- [] Review this note
-- [] Workshops
-    + [] Week2
-    + [] Week3
-    + [] Week4
-    + [] Week5
-    + [] Week6
-    + [] Week7
-    + [] Week8
-    + [] Week9
-    + [] Week10
-    + [] Week11
-- [] Questions
-    + [] Last lecture
-    + [] Sample Set 1
-    + [] Sample Set 2
-    + [] Network of data
-    + [] Spreadsheet
-    + [] Interactive Web Application
+- [ ] Review this note
+- [ ] Workshops
+    + [ ] Week2
+    + [ ] Week3
+    + [ ] Week4
+    + [ ] Week5
+    + [ ] Week6
+    + [ ] Week7
+    + [ ] Week8
+    + [ ] Week9
+    + [ ] Week10
+    + [ ] Week11
+- [ ] Questions
+    + [ ] Last lecture
+    + [X] Sample Set 1
+    + [ ] Sample Set 2
+    + [X] Network of data
+    + [X] Spreadsheet
+    + [X] Interactive Web Application
